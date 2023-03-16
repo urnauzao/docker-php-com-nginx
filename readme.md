@@ -38,6 +38,10 @@ A listagem de pastas do projeto deve ficar:
     readme.md
 ```
 
+## Certifique-se que sua aplicação Laravel ficou em `./app` e que existe o seguinte caminho: `/app/public/index.php`
+
+## Certifique-se que sua aplicação Laravel possuí um .env e que este .env está com a `APP_KEY=` definida com valor válido.
+
 ## Contruir a imagem Docker, execute:
 
 ```sh

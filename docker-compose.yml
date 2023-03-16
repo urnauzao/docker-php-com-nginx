@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  web:
+    image: urnau/app1-php:prod-nginx-php-fpm8.2.3
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        PHP_VERSION: '8.2.3-fpm-bullseye'
+    # volumes:
+    #   - ./app:/var/www/app
+    ports:
+      - "80:80" #http
+      - "443:443" #https

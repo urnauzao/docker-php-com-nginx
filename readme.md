@@ -12,6 +12,8 @@ Neste repositório vamos fazer a criação de uma imagem Docker que embora possa
 
 - <b>Composer</b>, afinal de contas é preciso baixar as dependências mais atuais toda vez que fomos crontruir uma imagem Docker.
 
+# Passo a Passo
+
 ## Certifique-se de estar com o Docker em execução.
 
 ```sh
@@ -70,4 +72,16 @@ docker compose down
 
 ```sh
 docker exec -it web bash
+```
+
+# Solução de Problemas
+
+## Problema de permissão
+
+- Quando for criado novos arquivos, ou quando for a primeira inicialização do container com a aplicação, pode então haver um erro de permissão de acesso as pastas, neste caso, entre dentro do container da aplicação e execeute.
+
+```sh
+cd /var/www && \
+chown -R www-data:www-data * && \
+chmod -R o+w app
 ```

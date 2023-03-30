@@ -12,6 +12,10 @@ Neste repositório vamos fazer a criação de uma imagem Docker que embora possa
 
 - <b>Composer</b>, afinal de contas é preciso baixar as dependências mais atuais toda vez que fomos crontruir uma imagem Docker.
 
+# Vídeos Tutorial
+
+[Vídeo Sobre Criação do Dockerfile e do Docker Compose file](https://youtu.be/iDJjb2zYa4c)
+
 # Passo a Passo
 
 ## Certifique-se de estar com o Docker em execução.

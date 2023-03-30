@@ -12,6 +12,10 @@ Neste repositório vamos fazer a criação de uma imagem Docker que embora possa
 
 - <b>Composer</b>, afinal de contas é preciso baixar as dependências mais atuais toda vez que fomos crontruir uma imagem Docker.
 
+# Vídeos Tutorial
+
+[Vídeo Sobre Criação do Dockerfile e do Docker Compose file](https://youtu.be/iDJjb2zYa4c)
+
 # Passo a Passo
 
 ## Certifique-se de estar com o Docker em execução.
@@ -88,4 +92,42 @@ docker exec -it web bash
 cd /var/www && \
 chown -R www-data:www-data * && \
 chmod -R o+w app
+```
+
+# Build e Push Docker Hub
+
+```sh
+docker compose build
+```
+
+```sh
+ docker composer up
+```
+
+```sh
+ docker composer up -d
+```
+
+```sh
+ docker stats
+```
+
+```sh
+ docker exec -it CONTAINER_ID bash
+```
+
+```sh
+ docker compose push
+```
+
+```sh
+ docker login
+```
+
+```sh
+ docker logout
+```
+
+```sh
+ docker run -p 80:80 -p 443:443 urnau/php82-app-2023:v1
 ```

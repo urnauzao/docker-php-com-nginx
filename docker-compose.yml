@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: ./docker/Dockerfile
       args:
-        PHP_VERSION: '8.2.3-fpm-bullseye'
+        PHP_VERSION: '8.2.4-fpm-bullseye'
     # volumes:
     #   - ./app:/var/www/app
     ports:

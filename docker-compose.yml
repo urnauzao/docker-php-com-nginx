@@ -8,7 +8,7 @@ services:
       dockerfile: ./docker/Dockerfile
       # dockerfile: ./docker/Dockerfile.light
       args:
-        PHP_VERSION: '8.2.3-fpm-bullseye'
+        PHP_VERSION: '8.2.4-fpm-bullseye'
     # volumes:
     #   - ./app:/var/www/app
     ports:

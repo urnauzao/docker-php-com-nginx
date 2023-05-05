@@ -82,6 +82,24 @@ docker compose down
 docker exec -it web bash
 ```
 
+## Para fazer build de um único serviço
+
+```sh
+docker compose build web-octane
+```
+
+## Para fazer subir um único serviço
+
+```sh
+docker compose up -d web-octane
+```
+
+## Para entrar dentro do container via Docker Compose
+
+```sh
+docker compose exec web-octane bash
+```
+
 # Solução de Problemas
 
 ## Problema de permissão

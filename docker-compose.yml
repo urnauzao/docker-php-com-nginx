@@ -17,7 +17,7 @@ services:
       
   web-light:
     image: urnau/php82-app-2023:light
-    container_name: web
+    container_name: web-light
     build:
       context: .
       dockerfile: ./docker/Dockerfile.light
@@ -25,6 +25,18 @@ services:
         PHP_VERSION: '8.2.4-fpm-bullseye'
     volumes:
       - ./app:/var/www/app
+    ports:
+      - "80:80" #http
+      - "443:443" #https
+
+  web-octane:
+    image: urnau/php82-app-2023:octane
+    container_name: web-octane
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.octane
+      args:
+        PHP_VERSION: '8.2.4-bullseye'
     ports:
       - "80:80" #http
       - "443:443" #https

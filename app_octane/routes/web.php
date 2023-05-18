@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $key = "redis-welcome-views";
+    $views = null;
+    try {
+        $redis = Redis::connection('default');
+        $redis->incr($key, 1);
+        $views = $redis->get($key, null);
+    } catch (\Throwable $th) {
+    }
+    return view('welcome')->with('views', $views);
 });
 
 Route::get('/teste', function () {

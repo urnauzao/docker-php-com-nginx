@@ -1,5 +1,6 @@
 <?php
 
+use App\Jobs\VisitaJob;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,9 @@ Route::get('/', function () {
         $views = $redis->get($key, null);
     } catch (\Throwable $th) {
     }
+
+    VisitaJob::dispatch(request()->ip())->delay(now()->addSeconds(15));
+
     return view('welcome')->with('views', $views);
 });
 

@@ -56,6 +56,10 @@ RUN composer install --no-interaction
 RUN composer require laravel/octane
 RUN php artisan octane:install --server=swoole
 
+### HORIZON
+RUN composer require laravel/horizon
+RUN php artisan horizon:install
+
 ### Comandos úteis para otimização da aplicação
 RUN php artisan clear-compiled
 RUN php artisan optimize

@@ -85,19 +85,19 @@ docker exec -it web bash
 ## Para fazer build de um único serviço
 
 ```sh
-docker compose build web-octane
+docker compose build web-horizon
 ```
 
 ## Para fazer subir um único serviço
 
 ```sh
-docker compose up -d web-octane
+docker compose up -d web-horizon
 ```
 
 ## Para entrar dentro do container via Docker Compose
 
 ```sh
-docker compose exec web-octane bash
+docker compose exec web-horizon bash
 ```
 
 # Solução de Problemas

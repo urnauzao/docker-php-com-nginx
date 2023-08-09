@@ -8,7 +8,7 @@ Neste repositório vamos fazer a criação de uma imagem Docker que embora possa
 
 - <b>Nginx</b>, como proxy reverso/servidor. Por fim de testes é que o Nginx está presente nesta imagem, em um momento de otimização está imagem deixará de ter o Nginx.
 
-- <b>Supervisor</b>, indispensal para executarmos a aplicação PHP e permitir por exemplo a execução de filas e jobs.
+- <b>Supervisor</b>, indispensável para executarmos a aplicação PHP e permitir por exemplo a execução de filas e jobs.
 
 - <b>Composer</b>, afinal de contas é preciso baixar as dependências mais atuais toda vez que fomos crontruir uma imagem Docker.
 
